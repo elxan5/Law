@@ -1,0 +1,301 @@
+@mixin topMenu {
+    /*Top Menu*/
+    #TopMenu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        background: #fff;
+        padding-top: 15px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        .mainNav {
+
+            background: #fff;
+            border: none;
+            ul {
+                li {
+                    // font-size: 1.1em;
+                    .icons {
+                        padding: 16px 0;
+                    }
+                    a {
+                        &:hover {
+                            background: transparent;
+                            color: #c8ac48;
+                        }
+                        font-family:Montserrat,
+                        "Helvetica Neue",
+                        Helvetica,
+                        Arial,
+                        sans-serif;
+                        font-weight: 400;
+                        color:$mainColor;
+                        padding: 15px 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*end TopMenu*/
+
+
+/******************/
+
+@mixin drop-slide {
+    .dropSlide {
+        .aboutView {
+            background: $orange;
+            border: none;
+            padding: 13px 35px;
+            margin: 60px 0;
+            font-size: 1.1em;
+            border-radius: 25px;
+            &:hover {
+                background: $skyBlue;
+            }
+        }
+        .aboutAllView {
+            transition: .25s;
+            position: relative;
+            top: 0;
+        }
+        .aboutProfile {
+            cursor: pointer;
+            background-image: url("../img/dark_pattern.png");
+            padding: 20px 30px;
+            position: absolute;
+            width: 100%;
+            h5 {
+                &:hover {
+                    color: $yellowMain;
+                }
+                margin: 0;
+                color: white;
+            }
+            .mainRead {
+                text-align: center;
+                .readBtn {
+                    border: none;
+                    background: $yellowMain;
+                    padding: 12px 20px;
+                }
+            }
+            .grey {
+                font-size: .9em;
+                color: $white;
+            }
+        }
+        .aboutTeamMember {
+            font-size: 1.1em;
+            background-image: url("../img/dark_pattern.png");
+            padding: 5px 0px;
+            padding-left: 30px;
+            position: relative;
+
+            h5 {
+                font-weight: 700;
+                font-size: 20px;
+                color: #fff;
+                pointer-events: none;
+            }
+            em {
+                font-size: 14px;
+                color: $yellowMain;
+                opacity: 0.8;
+                pointer-events: none;
+            }
+        }
+    }
+}
+
+
+/**/
+
+@mixin mainSearch {
+    .serviceSearch{
+    .search-form {
+        position: relative;
+        width: 100%;
+        vertical-align: top;
+        padding: 7px 20px;
+        border: 1px solid #e3d5a3;
+        .search-field {
+            outline: none;
+            border: none;
+            background: transparent;
+            line-height: 24px;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+        .search-submit {
+            &:before {
+                content: "\f002";
+                font-family: "FontAwesome";
+                font-size: 14px;
+            }
+            position: absolute;
+            right: 20px;
+            top:50%;
+            transform:translateY(-50%);
+            background-color: transparent;
+            border: none;
+            font-size: 0;
+            line-height: 24px;
+            height: 24px;
+            color:$yellowMain
+        }
+    }
+}
+}
+
+
+/**/
+
+
+/*Content Middle*/
+
+@mixin middleContent {
+    .middleService {
+        padding: 160px 0;
+        text-align: center;
+        .iconTop {
+            i {
+                font-size: 1.3em;
+                color: $white
+            }
+        }
+        .serTittle {
+            color: $white;
+            line-height: 1.2;
+            font-family: 'Libre Baskerville', serif;
+            font-size: 48px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        .breadCrump {
+            ol {
+                padding: 0;
+                margin: 0;
+                li {
+                    &:last-child {
+                        a {
+                            color: $yellowMain
+                        }
+                    }
+                    &:before {
+                        content: "|";
+                        color: #bcbcbc;
+                        padding: 0 8px;
+                    }
+                    font-weight: 400;
+                    font-size: 13px;
+                    display: inline-block;
+                    a {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*end content Middle*/
+
+@mixin transition($in) {
+    transition: $in;
+    -webkit-transition: $in;
+    -moz-transition: $in;
+    -o-transition: $in;
+    -ms-transition: $in;
+}
+
+@mixin transform($in) {
+    transform: $in;
+    -webkit-transform: $in;
+    -moz-transform: $in;
+    -o-transform: $in;
+    -ms-transform: $in;
+}
+
+@mixin animation($in) {
+    animation: $in;
+    -webkit-animation: $in;
+    -moz-animation: $in;
+    -o-animation: $in;
+    -ms-animation: $in;
+}
+
+
+/* Footer*/
+
+@mixin Footer {
+    #Footer {
+        background: #0A152A;
+        padding: 65px 0; // margin-top: 30px;
+        color: #A7AEBA;
+        .footerLogo {
+            color: #ddd;
+            padding-bottom: 15px;
+        }
+        .footerDivider {
+            height: 2px;
+            width: 65px;
+            background: $yellowMain;
+            margin-bottom: 15px
+        }
+        .small-info {
+            font-weight: 300;
+        }
+        .teaser-text {
+            a {
+                color: #A7AEBA;
+                font-weight: 300;
+            }
+            padding-left:15px;
+            display: table-cell;
+        }
+        .teaser-icon {
+            font-size: 1.25em;
+            display: table-cell;
+            padding-top: 5px;
+            color: $yellowMain;
+            padding-bottom: 10px;
+            padding-right: 10px;
+        }
+        #menu-footer {
+            li {
+                padding-bottom: 10px;
+                padding-right: 10px;
+                a {
+                    &:hover {
+                        color: $yellowMain;
+                    }
+                    color:#A7AEBA;
+                    text-decoration: none;
+                    padding:10px 5px
+                }
+            }
+        }
+        .social-group {
+            padding: 15px 0;
+            .social-icon {
+                &:hover {
+                    color: $yellowMain;
+                }
+                text-decoration: none;
+                color: #A7AEBA;
+                padding: 15px 0px;
+                padding-right: 20px;
+            }
+        }
+    }
+}
+
+
+
+/*end Footer*/

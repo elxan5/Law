@@ -1,0 +1,97 @@
+
+#Header {
+    @include topMenu;
+    .infoImg {
+            padding-top: 35px;
+        }
+    #Service {
+        background: url(..//img/service1.jpg) no-repeat;
+        background-position: center center;
+        background-size: cover;
+        @include middleContent
+    }
+    #serviceInfo {
+    	background-image: url(../img/grey_pattern.png);
+        padding: 30px 0;
+        padding-bottom: 30px;
+       
+        .slz-list {
+            li {
+                padding: 8px 0;
+            }
+        }
+        .serviceContent {
+            font-size: .89em;
+            color: #747981;
+         .serTop{
+         	text-align: center;
+         }
+        }
+        .serviceRight {
+            padding-top: 35px;
+            .practiceList {
+                ul {
+                    li {
+                        padding-left: 15px;
+                        padding-bottom: 15px;
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+                        margin-bottom: 15px;
+                        position: relative;
+                        &:hover{
+                    	a{
+                    		color:$yellowMain;
+                    	}
+                    	}
+                        &:before {
+                            position: absolute;
+                            content: "\f10c";
+                            font-family: "FontAwesome";
+                            font-size: 11px;
+                            top: 2px;
+                            left: 3px;
+                            transition: all .3s ease;
+                        }
+                        a {
+                            margin-bottom: 10px;
+                            position: relative;
+                            color: #747981;
+                            padding-left: 15px;
+                            padding-bottom: 10px;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+            .tittle-widget {
+                color: #304771;
+                font-size: 18px;
+                font-weight: 700;
+                padding-top: 16px;
+                margin-bottom: 25px;
+                position: relative;
+                text-transform: uppercase;
+                &:before {
+                    position: absolute;
+                    content: '';
+                    top: 0;
+                    left: 0;
+                    width: 50%;
+                    height: 2px;
+                    background-color: $yellowMain
+                }
+                &:after {
+                    position: absolute;
+                    content: '';
+                    top: 4px;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    background: $yellowMain;
+                }
+            }
+
+            @include mainSearch;
+        }
+    }
+    @include Footer;
+}

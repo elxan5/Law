@@ -1,0 +1,16 @@
+#Header{
+	#mainNews{
+		background: url(..//img/pagetitle-blog.jpg) no-repeat;
+        background-position: center center;
+        background-size: cover;
+		@include middleContent;
+
+	}
+	#newsInfo{
+		.mainElement{
+			margin: 20px 0;
+		}
+		padding: 60px 0;
+			@include mainSearch;
+		}
+}

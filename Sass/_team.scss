@@ -1,0 +1,72 @@
+#Header{
+@include topMenu;
+#AttorneyInfo {
+    .infoTittle {
+        line-height: 1;
+        color: #304771;
+        font-size: 1.6em;
+        font-family: 'Libre Baskerville', serif;
+        padding: 10px 0;
+        text-transform: uppercase
+    }
+    .overviewAttorney {
+        p {
+            color: #7C8088;
+        }
+    }
+    padding-top: 65px;
+    .infoTop {
+        padding-bottom: 20px;
+    }
+    .attorneyMiddle {
+        margin-bottom: 65px;
+        border-bottom: 3px solid $yellowMain;
+    }
+    .businessRight {
+        .attorneyContent {
+            max-width: 700px;
+            .emailP {
+                margin: 0;
+            }
+            p {
+                // padding-bottom: 5px;
+                color: #7C8088;
+                line-height: 1.5em;
+                a {
+                    padding-left: 5px;
+                    color: #7C8088;
+                }
+            }
+        }
+        .middleInfo {
+            color: $yellowMain;
+        }
+
+        h2 {
+            margin: 0;
+        }
+    }
+    .bestAwward {
+        li {
+            padding-right: 15px;
+        }
+    }
+    .practiceAttorney {
+        padding-bottom: 65px;
+        .progress-bar-striped {
+            background: red;
+        }
+        .progress-bar {
+            background: $yellowMain
+        }
+    }
+    .attorneyEducation{
+    	p{
+    		line-height: 1.7em;
+    	color:#7C8088;
+    	font-size: .9em;	
+    	}
+    }
+}
+@include Footer;
+}
